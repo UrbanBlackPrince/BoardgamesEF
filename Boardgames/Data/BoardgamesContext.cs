@@ -1,17 +1,23 @@
 ﻿namespace Boardgames.Data
 {
+    using Boardgames.Data.Models;
     using Microsoft.EntityFrameworkCore;
-    
+
     public class BoardgamesContext : DbContext
     {
         public BoardgamesContext()
-        { 
+        {
         }
 
         public BoardgamesContext(DbContextOptions options)
-            : base(options) 
+            : base(options)
         {
         }
+
+        public DbSet<Boardgame> Boardgames { get; set; } = null!;
+        public DbSet<Creator> Creators { get; set; } = null!;
+        public DbSet<Seller> Sellers { get; set; } = null!;
+        public DbSet<BoardgameSeller> BoardgamesSellers { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,6 +30,11 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder
+                .Entity<BoardgameSeller>(e =>
+                {
+                    e.HasKey(ct => new { ct.BoardgameId, ct.SellerId });
+                });
         }
     }
 }
