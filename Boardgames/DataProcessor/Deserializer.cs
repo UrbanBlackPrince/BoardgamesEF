@@ -1,12 +1,12 @@
 ﻿namespace Boardgames.DataProcessor
 {
-    using System.ComponentModel.DataAnnotations;
-    using System.Text;
     using Boardgames.Data;
     using Boardgames.Data.Models;
     using Boardgames.Data.Models.Enums;
     using Boardgames.DataProcessor.ImportDto;
     using Newtonsoft.Json;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
     using Trucks.Utilities;
 
     public class Deserializer
