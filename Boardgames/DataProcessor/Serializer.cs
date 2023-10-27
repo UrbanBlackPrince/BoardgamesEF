@@ -66,8 +66,6 @@
                  .Take(5)
                  .ToArray();
 
-
-
             return JsonConvert.SerializeObject(sellers, Formatting.Indented);
         }
     }
