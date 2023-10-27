@@ -18,6 +18,7 @@ namespace Trucks.Utilities
             return deserializedDtos;
         }
 
+
         public string Serialize<T>(T[] obj, string rootName)
         {
             StringBuilder sb = new StringBuilder();
