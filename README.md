@@ -4,7 +4,7 @@
 
 This repository contains a Boardgames Management System developed with Entity Framework Core following a Code First approach. Designed to facilitate the management of board game collections, it allows users to track board games, publishers, and related gameplay statistics.
 
-## Project Structure
+## Project Structure 
 
 - `Data`: Contains the `DbContext` and configuration classes for Entity Framework.
 - `Models`: Includes domain model classes for BoardGame, Publisher, and PlayerStats.
